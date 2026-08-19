@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+title: "ScamGuard-VN"
+message: "Nếu sử dụng mã nguồn, dữ liệu hoặc kết quả, vui lòng trích dẫn repository và phiên bản phát hành."
+type: software
+authors:
+  - family-names: "Phan"
+    given-names: "Tuan Anh"
+repository-code: "https://github.com/TuanAnhPhan-pika/SCAMGUARD-VN"
+version: "1.0.0-research"
+date-released: "2026-08-19"

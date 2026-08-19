@@ -1,0 +1,7 @@
+{
+  "phase": "PREDICTIONS_FROZEN_GOLD_NOT_OPENED",
+  "timestamp_utc": "2026-08-19T06:31:24.565259+00:00",
+  "cases": 200,
+  "predictions_sha256": "67aba49b6fb118d6b5c5ba4e335442a6bba7e5842706fe3477609bddf2c311cf",
+  "final_model_input_sha256": "bf28821ad7a00fdecdbf323a6fe4db26a74ecf21c7a4a63f9194f25682bc3d87"
+}

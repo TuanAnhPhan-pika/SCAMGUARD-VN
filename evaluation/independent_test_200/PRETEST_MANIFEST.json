@@ -1,0 +1,21 @@
+{
+  "test_id": "INDEPENDENT_HELD_OUT_200_20260819",
+  "created_utc": "2026-08-19T06:30:44.942227+00:00",
+  "phase": "PRE_INFERENCE_FROZEN",
+  "cases": 200,
+  "source_sha256": "2fc87ac8f48386bce455badaeca3a46b25762b947ba3dfd66c7739ea82b2c32e",
+  "final_model_input_sha256": "bf28821ad7a00fdecdbf323a6fe4db26a74ecf21c7a4a63f9194f25682bc3d87",
+  "internal_gold_sha256_sealed": "40807e46939000a487e5975b5b51942a11ffffb1a4ced3e66a5fa62b5fa7d2ef",
+  "semantic_checkpoint_sha256": "ae0420e7efbdbe791b71907131c480e6fcb9d7cef9f1e4f6382cdc392eb66019",
+  "risk_checkpoint_sha256": "824b58d32366d746adc32b4350c73cad49054f538d365f6661da4036535c8328",
+  "preprocessing_files_sha256": {
+    "risk_runtime": "5e820e646dd9be78028c1a65fd014ba18a2dc68c417422d655b099c2cbbdbd1b",
+    "semantic_preprocessing": "943e51465faf883560000934574d518e176e76843e915d72de3e55d399d4c0ee",
+    "dialogue_parser": "96f1943edbaa369be3a7ca1cfb69b57ea5455c7c76c790ea2d1bc00635c7df5b"
+  },
+  "decision_rule": "argmax over NO_EVIDENCE, REVIEW, HIGH_EVIDENCE; no post-hoc thresholds",
+  "model_modified_after_test_start": false,
+  "threshold_tuned_after_test_start": false,
+  "gold_opened_before_prediction_freeze": false,
+  "test_cases_changed_after_test_start": false
+}

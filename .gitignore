@@ -1,0 +1,17 @@
+.idea/
+.gradle/
+.kotlin/
+.venv/
+.venv-win/
+**/__pycache__/
+*.py[cod]
+local.properties
+**/build/
+artifacts/checkpoints/*.pt
+artifacts/checkpoints/*.bin
+artifacts/checkpoints/*.safetensors
+.env
+*.jks
+*.keystore
+docs/*_QA.pdf
+
