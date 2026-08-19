@@ -1,0 +1,105 @@
+{
+  "status": "TRAINING_COMPLETE",
+  "device": "NVIDIA GeForce RTX 4050 Laptop GPU",
+  "train_rows": 4717,
+  "dev_rows": 486,
+  "history": [
+    {
+      "per_head": {
+        "candidate_action": {
+          "accuracy": 0.8930041152263375,
+          "macro_f1": 0.8912673124565632
+        },
+        "requested": {
+          "accuracy": 0.977366255144033,
+          "macro_f1": 0.9759227148872925
+        },
+        "negated": {
+          "accuracy": 0.9897119341563786,
+          "macro_f1": 0.9677697460043769
+        },
+        "quoted": {
+          "accuracy": 0.9938271604938271,
+          "macro_f1": 0.9806618476026262
+        },
+        "reported": {
+          "accuracy": 0.9876543209876543,
+          "macro_f1": 0.9758200935354406
+        }
+      },
+      "supported_action": {
+        "accuracy": 0.9814814814814815,
+        "macro_f1": 0.9801696505886993
+      },
+      "selection_score": 0.9433346346254229,
+      "epoch": 1,
+      "mean_train_batch_loss": 2.5821113989683493,
+      "peak_cuda_allocated_bytes": 1842877952
+    },
+    {
+      "per_head": {
+        "candidate_action": {
+          "accuracy": 0.9609053497942387,
+          "macro_f1": 0.9593826342053206
+        },
+        "requested": {
+          "accuracy": 1.0,
+          "macro_f1": 1.0
+        },
+        "negated": {
+          "accuracy": 0.9979423868312757,
+          "macro_f1": 0.9934134739181699
+        },
+        "quoted": {
+          "accuracy": 0.9938271604938271,
+          "macro_f1": 0.9806618476026262
+        },
+        "reported": {
+          "accuracy": 0.9814814814814815,
+          "macro_f1": 0.9647175549120359
+        }
+      },
+      "supported_action": {
+        "accuracy": 0.9897119341563786,
+        "macro_f1": 0.9891017217485683
+      },
+      "selection_score": 0.9804835702066987,
+      "epoch": 2,
+      "mean_train_batch_loss": 0.567409657751794,
+      "peak_cuda_allocated_bytes": 1842877952
+    },
+    {
+      "per_head": {
+        "candidate_action": {
+          "accuracy": 0.9629629629629629,
+          "macro_f1": 0.961416868261528
+        },
+        "requested": {
+          "accuracy": 0.9979423868312757,
+          "macro_f1": 0.9978334039185965
+        },
+        "negated": {
+          "accuracy": 0.9979423868312757,
+          "macro_f1": 0.9934134739181699
+        },
+        "quoted": {
+          "accuracy": 0.9938271604938271,
+          "macro_f1": 0.9806618476026262
+        },
+        "reported": {
+          "accuracy": 0.98559670781893,
+          "macro_f1": 0.9722573332137294
+        }
+      },
+      "supported_action": {
+        "accuracy": 0.9917695473251029,
+        "macro_f1": 0.9912723354583819
+      },
+      "selection_score": 0.9812984691177047,
+      "epoch": 3,
+      "mean_train_batch_loss": 0.31461466384876263,
+      "peak_cuda_allocated_bytes": 1842877952
+    }
+  ],
+  "best_selection_score": 0.9812984691177047
+}
