@@ -14,4 +14,4 @@ artifacts/checkpoints/*.safetensors
 *.jks
 *.keystore
 docs/*_QA.pdf
-
+*_upload_response.json
