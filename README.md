@@ -10,6 +10,19 @@ ScamGuard-VN là proof-of-concept nhận diện hành động nhạy cảm và m
 
 > Đây là công cụ hỗ trợ nghiên cứu, không phải dịch vụ xác minh danh tính hay kết luận pháp lý/tài chính.
 
+## Mô hình đã huấn luyện
+
+Tải hai checkpoint tại **[Release Model v1](https://github.com/TuanAnhPhan-pika/SCAMGUARD-VN/releases/tag/model-v1)**, trong mục **Assets**:
+
+| File | Chức năng |
+|---|---|
+| `checkpoint_best.pt` | Nhận diện hành động và bốn thuộc tính ngữ dụng |
+| `risk_e2e_best.pt` | Phân loại ba mức rủi ro |
+
+Đặt cả hai file vào `artifacts/checkpoints/`. Các file checkpoint được lưu trong Release, không đi kèm khi clone repository hoặc tải ZIP mã nguồn. Có thể tải tự động bằng `scripts/download_checkpoints.ps1` sau khi cài môi trường theo hướng dẫn bên dưới.
+
+**Không cần huấn luyện lại để chạy thử:** sử dụng hai checkpoint đã cung cấp và làm theo mục “Chạy nhanh trên Windows”.
+
 ## Kết quả chính
 
 | Tập đánh giá | Chỉ số | Kết quả |
