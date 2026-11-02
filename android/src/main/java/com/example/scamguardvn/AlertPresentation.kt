@@ -9,7 +9,7 @@ data class AlertPresentation(
 
 /** Visualizes the conversation-level neural risk output; it does not inspect text. */
 fun presentAlert(riskLevel: String): AlertPresentation = when (riskLevel) {
-    "SAFE" -> AlertPresentation(
+    "NO_EVIDENCE" -> AlertPresentation(
         AlertLevel.GREEN,
         "CHƯA PHÁT HIỆN",
     )
@@ -17,8 +17,9 @@ fun presentAlert(riskLevel: String): AlertPresentation = when (riskLevel) {
         AlertLevel.ORANGE,
         "CẦN XEM XÉT",
     )
-    else -> AlertPresentation(
+    "HIGH_EVIDENCE" -> AlertPresentation(
         AlertLevel.RED,
         "NGUY HIỂM",
     )
+    else -> throw IllegalArgumentException("API trả nhãn rủi ro không hợp lệ: $riskLevel")
 }

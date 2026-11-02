@@ -85,6 +85,16 @@ adb reverse tcp:8765 tcp:8765
 
 4. Build/run ứng dụng từ Android Studio. Emulator có thể dùng cùng lệnh `adb reverse`.
 
+Ứng dụng dùng đúng ba nhãn của API công bố: `NO_EVIDENCE` → xanh, `REVIEW` → cam, `HIGH_EVIDENCE` → đỏ. Nhãn thiếu hoặc không hợp lệ được báo là không có kết quả; API lịch sử dùng `SAFE`/`SCAM` không thuộc giao thức của bản ứng dụng này. Khi guidance chưa khả dụng, kết quả phân loại vẫn hiển thị và app báo chưa có hướng dẫn.
+
+Kiểm tra ánh xạ nhãn, xử lý JSON/guidance và luồng HTTP bằng phản hồi mẫu, rồi build APK:
+
+```powershell
+.\gradlew.bat :android:testDebugUnitTest :android:assembleDebug
+```
+
+Các kiểm tra này không chạy lại mô hình hoặc bộ independent test 200.
+
 ## Tái lập kết quả đã công bố
 
 Xác minh hash và tính lại metric từ prediction đã đóng băng:

@@ -24,7 +24,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
-            android:text="JARP-VN Risk v0.7 • chờ local API"
+            android:text="ScamGuard-VN Semantic + Risk E2E • chờ local API"
             android:textColor="#526777"
             android:textSize="13sp" />
 

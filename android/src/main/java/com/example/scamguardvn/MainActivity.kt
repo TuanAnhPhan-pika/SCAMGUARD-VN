@@ -115,7 +115,7 @@ class MainActivity : AppCompatActivity() {
         val status = findViewById<TextView>(R.id.modelStatus)
         button.isEnabled = false
         button.text = "Đang chạy model…"
-        status.text = "Đang kết nối JARP-VN trên laptop…"
+        status.text = "Đang kết nối ScamGuard-VN trên laptop…"
         modelClient.analyze(input.text.toString()) { result ->
             runOnUiThread {
                 button.isEnabled = true
@@ -133,13 +133,15 @@ class MainActivity : AppCompatActivity() {
                     applyAlertColors(visual.level)
                     card.visibility = android.view.View.VISIBLE
                 }.onFailure { error ->
-                    status.text = "Không kết nối được model local"
-                    title.text = "Model chưa phản hồi"
+                    status.text = "Không nhận được kết quả hợp lệ từ model"
+                    title.text = "Chưa có kết quả phân tích"
                     alertBadge.text = "KHÔNG CÓ KẾT QUẢ"
                     evidence.text = error.message ?: "Lỗi không xác định"
                     replyGuidance.text = "Chưa thể tạo hướng dẫn phản hồi."
                     safeAction.text = "Hãy chạy API trên laptop tại cổng 8765 rồi thử lại. App không tự tạo kết quả thay model."
-                    card.setCardBackgroundColor(getColor(android.R.color.white))
+                    safeAction.visibility = android.view.View.GONE
+                    technicalButton.text = "Xem dữ liệu kỹ thuật"
+                    applyAlertColors(AlertLevel.ORANGE)
                     card.visibility = android.view.View.VISIBLE
                 }
             }
