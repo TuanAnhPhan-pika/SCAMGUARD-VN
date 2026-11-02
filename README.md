@@ -35,7 +35,6 @@ runtime/research/v3/jarp_vn/   encoder/collator lõi
 data/splits/                   bốn split TRAIN/DEV dùng trong báo cáo
 evaluation/independent_test_200/ input, gold, prediction, report và hash
 reports/training/              lịch sử metric DEV
-docs/                          bản thuyết minh nghiên cứu
 scripts/                       cài đặt, tải checkpoint và xác minh artefact
 ```
 
