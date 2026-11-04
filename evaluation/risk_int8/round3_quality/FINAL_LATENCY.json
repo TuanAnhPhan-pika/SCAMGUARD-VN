@@ -1,0 +1,27 @@
+{
+  "protocol": "Fixed selected model; no model selection here. Two repetitions; reversed model order in repeat 2; 5 warmups per session; same 200 pretokenized inputs; CPU 4 threads, batch 1; no tokenization/guidance.",
+  "android_tested": false,
+  "models": {
+    "fp32": {
+      "median_ms": 37.0567499999197,
+      "p95_ms": 51.431750000028835,
+      "mean_ms": 35.85256925000408,
+      "calls": 400,
+      "session_load_seconds": [
+        1.6516752999996243,
+        1.6768499999998312
+      ]
+    },
+    "selected_int8": {
+      "median_ms": 16.455549999818686,
+      "p95_ms": 24.282354999877477,
+      "mean_ms": 15.953060250004683,
+      "calls": 400,
+      "session_load_seconds": [
+        0.8904430999996293,
+        0.8912765000000036
+      ]
+    }
+  },
+  "median_speedup": 2.251930199861324
+}

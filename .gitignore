@@ -14,3 +14,15 @@ artifacts/checkpoints/*.safetensors
 *.jks
 *.keystore
 *_upload_response.json
+
+# Research outputs; large model weights are separate Release assets.
+experiments/*/outputs/
+experiments/risk_int8/round2_research/
+experiments/risk_int8/round3_quality/
+experiments/risk_int8/cache/
+experiments/risk_int8/deps/
+experiments/risk_int8/tmp/
+experiments/risk_int8/tokenizer/tokenizer.json
+artifacts/base/
+artifacts/onnx/*.onnx
+artifacts/onnx/*.data

@@ -1,0 +1,8 @@
+{
+  "cases": 200,
+  "predictions_sha256": "f2350f8c7fd4daaddbae9f857603985a722f7753f04fb2604771ae15dfad0f96",
+  "checkpoint_sha256": "2faf3d9e52836100831ce914f17912a54b00938d0dfe541e0716af1386f807e6",
+  "input_sha256": "bf28821ad7a00fdecdbf323a6fe4db26a74ecf21c7a4a63f9194f25682bc3d87",
+  "parser": "original risk_v05 parser used to produce the public frozen 200 predictions",
+  "timestamp_utc": "2026-11-04T11:06:58.013057+00:00"
+}

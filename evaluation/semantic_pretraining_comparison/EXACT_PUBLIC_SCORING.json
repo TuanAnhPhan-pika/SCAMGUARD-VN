@@ -1,0 +1,1707 @@
+{
+  "status": "EXACT_PUBLIC_METRIC_CODE_APPLIED_TO_BOTH_MODELS",
+  "evaluation_type": "POST_HOC_COMPARATIVE_RESCORING_OF_FROZEN_PREDICTIONS",
+  "evaluator_sha256": "f086c6dbfebb502ef82c1b73f7609ba64aabaa7db6e8d31f10e385d0d44ee692",
+  "verifier_sha256": "ace7d9114c7342bfa0dee21a3b7de70d75e6a6667e4c3ff6cc10c0ec62316f8b",
+  "prediction_or_model_changes": false,
+  "reference_files_unchanged": true,
+  "results": {
+    "baseline": {
+      "cases": 200,
+      "gold_distribution": {
+        "HIGH_EVIDENCE": 70,
+        "NO_EVIDENCE": 130
+      },
+      "prediction_distribution": {
+        "HIGH_EVIDENCE": 89,
+        "REVIEW": 45,
+        "NO_EVIDENCE": 66
+      },
+      "strict_accuracy": 0.57,
+      "strict_macro_f1_all_3_labels": 0.4304967269926839,
+      "classification_report_strict": {
+        "NO_EVIDENCE": {
+          "precision": 0.9090909090909091,
+          "recall": 0.46153846153846156,
+          "f1-score": 0.6122448979591837,
+          "support": 130.0
+        },
+        "REVIEW": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 0.0
+        },
+        "HIGH_EVIDENCE": {
+          "precision": 0.6067415730337079,
+          "recall": 0.7714285714285715,
+          "f1-score": 0.6792452830188679,
+          "support": 70.0
+        },
+        "accuracy": 0.57,
+        "macro avg": {
+          "precision": 0.505277494041539,
+          "recall": 0.410989010989011,
+          "f1-score": 0.4304967269926839,
+          "support": 200.0
+        },
+        "weighted avg": {
+          "precision": 0.8032686414708885,
+          "recall": 0.57,
+          "f1-score": 0.6356950327300731,
+          "support": 200.0
+        }
+      },
+      "confusion_matrix": {
+        "labels": [
+          "NO_EVIDENCE",
+          "REVIEW",
+          "HIGH_EVIDENCE"
+        ],
+        "values": [
+          [
+            60,
+            35,
+            35
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            6,
+            10,
+            54
+          ]
+        ]
+      },
+      "operational_policy": "POSITIVE accepts REVIEW/HIGH_EVIDENCE; HARD_NEGATIVE accepts NO_EVIDENCE/REVIEW; EASY_NEGATIVE accepts NO_EVIDENCE.",
+      "operational_accuracy": 0.685,
+      "subsets": {
+        "EASY_NEGATIVE": {
+          "cases": 65,
+          "strict_correct": 39,
+          "strict_accuracy": 0.6,
+          "operational_correct": 39,
+          "operational_accuracy": 0.6,
+          "prediction_counts": {
+            "NO_EVIDENCE": 39,
+            "REVIEW": 22,
+            "HIGH_EVIDENCE": 4
+          }
+        },
+        "HARD_NEGATIVE": {
+          "cases": 65,
+          "strict_correct": 21,
+          "strict_accuracy": 0.3230769230769231,
+          "operational_correct": 34,
+          "operational_accuracy": 0.5230769230769231,
+          "prediction_counts": {
+            "HIGH_EVIDENCE": 31,
+            "NO_EVIDENCE": 21,
+            "REVIEW": 13
+          }
+        },
+        "POSITIVE": {
+          "cases": 70,
+          "strict_correct": 54,
+          "strict_accuracy": 0.7714285714285715,
+          "operational_correct": 64,
+          "operational_accuracy": 0.9142857142857143,
+          "prediction_counts": {
+            "HIGH_EVIDENCE": 54,
+            "REVIEW": 10,
+            "NO_EVIDENCE": 6
+          }
+        }
+      },
+      "strict_errors": [
+        {
+          "case_id": "IND200_009",
+          "subset": "POSITIVE",
+          "gold": "HIGH_EVIDENCE",
+          "prediction": "REVIEW",
+          "risk_scores": {
+            "NO_EVIDENCE": 0.21865856647491455,
+            "REVIEW": 0.5049756765365601,
+            "HIGH_EVIDENCE": 0.2763657867908478
+          }
+        },
+        {
+          "case_id": "IND200_011",
+          "subset": "POSITIVE",
+          "gold": "HIGH_EVIDENCE",
+          "prediction": "REVIEW",
+          "risk_scores": {
+            "NO_EVIDENCE": 0.3198472261428833,
+            "REVIEW": 0.42355552315711975,
+            "HIGH_EVIDENCE": 0.25659722089767456
+          }
+        },
+        {
+          "case_id": "IND200_012",
+          "subset": "POSITIVE",
+          "gold": "HIGH_EVIDENCE",
+          "prediction": "REVIEW",
+          "risk_scores": {
+            "NO_EVIDENCE": 0.13695211708545685,
+            "REVIEW": 0.48376160860061646,
+            "HIGH_EVIDENCE": 0.3792862296104431
+          }
+        },
+        {
+          "case_id": "IND200_025",
+          "subset": "POSITIVE",
+          "gold": "HIGH_EVIDENCE",
+          "prediction": "NO_EVIDENCE",
+          "risk_scores": {
+            "NO_EVIDENCE": 0.5662282705307007,
+            "REVIEW": 0.23036903142929077,
+            "HIGH_EVIDENCE": 0.20340266823768616
+          }
+        },
+        {
+          "case_id": "IND200_026",
+          "subset": "POSITIVE",
+          "gold": "HIGH_EVIDENCE",
+          "prediction": "REVIEW",
+          "risk_scores": {
+            "NO_EVIDENCE": 0.04259540140628815,
+            "REVIEW": 0.5423394441604614,
+            "HIGH_EVIDENCE": 0.41506513953208923
+          }
+        },
+        {
+          "case_id": "IND200_029",
+          "subset": "POSITIVE",
+          "gold": "HIGH_EVIDENCE",
+          "prediction": "NO_EVIDENCE",
+          "risk_scores": {
+            "NO_EVIDENCE": 0.500085175037384,
+            "REVIEW": 0.26128146052360535,
+            "HIGH_EVIDENCE": 0.23863331973552704
+          }
+        },
+        {
+          "case_id": "IND200_033",
+          "subset": "POSITIVE",
+          "gold": "HIGH_EVIDENCE",
+          "prediction": "REVIEW",
+          "risk_scores": {
+            "NO_EVIDENCE": 0.045861054211854935,
+            "REVIEW": 0.8821722865104675,
+            "HIGH_EVIDENCE": 0.07196664810180664
+          }
+        },
+        {
+          "case_id": "IND200_038",
+          "subset": "POSITIVE",
+          "gold": "HIGH_EVIDENCE",
+          "prediction": "NO_EVIDENCE",
+          "risk_scores": {
+            "NO_EVIDENCE": 0.7906187176704407,
+            "REVIEW": 0.10631967335939407,
+            "HIGH_EVIDENCE": 0.10306160151958466
+          }
+        },
+        {
+          "case_id": "IND200_049",
+          "subset": "POSITIVE",
+          "gold": "HIGH_EVIDENCE",
+          "prediction": "REVIEW",
+          "risk_scores": {
+            "NO_EVIDENCE": 0.33943745493888855,
+            "REVIEW": 0.4342152178287506,
+            "HIGH_EVIDENCE": 0.22634731233119965
+          }
+        },
+        {
+          "case_id": "IND200_051",
+          "subset": "POSITIVE",
+          "gold": "HIGH_EVIDENCE",
+          "prediction": "NO_EVIDENCE",
+          "risk_scores": {
+            "NO_EVIDENCE": 0.6825789213180542,
+            "REVIEW": 0.11405272781848907,
+            "HIGH_EVIDENCE": 0.20336836576461792
+          }
+        },
+        {
+          "case_id": "IND200_053",
+          "subset": "POSITIVE",
+          "gold": "HIGH_EVIDENCE",
+          "prediction": "REVIEW",
+          "risk_scores": {
+            "NO_EVIDENCE": 0.21286840736865997,
+            "REVIEW": 0.6758400797843933,
+            "HIGH_EVIDENCE": 0.11129151284694672
+          }
+        },
+        {
+          "case_id": "IND200_057",
+          "subset": "POSITIVE",
+          "gold": "HIGH_EVIDENCE",
+          "prediction": "NO_EVIDENCE",
+          "risk_scores": {
+            "NO_EVIDENCE": 0.4940933287143707,
+            "REVIEW": 0.14003834128379822,
+            "HIGH_EVIDENCE": 0.36586830019950867
+          }
+        },
+        {
+          "case_id": "IND200_059",
+          "subset": "POSITIVE",
+          "gold": "HIGH_EVIDENCE",
+          "prediction": "REVIEW",
+          "risk_scores": {
+            "NO_EVIDENCE": 0.28487178683280945,
+            "REVIEW": 0.436270534992218,
+            "HIGH_EVIDENCE": 0.27885767817497253
+          }
+        },
+        {
+          "case_id": "IND200_063",
+          "subset": "POSITIVE",
+          "gold": "HIGH_EVIDENCE",
+          "prediction": "NO_EVIDENCE",
+          "risk_scores": {
+            "NO_EVIDENCE": 0.6339446306228638,
+            "REVIEW": 0.10502740740776062,
+            "HIGH_EVIDENCE": 0.2610279619693756
+          }
+        },
+        {
+          "case_id": "IND200_065",
+          "subset": "POSITIVE",
+          "gold": "HIGH_EVIDENCE",
+          "prediction": "REVIEW",
+          "risk_scores": {
+            "NO_EVIDENCE": 0.379582941532135,
+            "REVIEW": 0.3892647325992584,
+            "HIGH_EVIDENCE": 0.23115237057209015
+          }
+        },
+        {
+          "case_id": "IND200_069",
+          "subset": "POSITIVE",
+          "gold": "HIGH_EVIDENCE",
+          "prediction": "REVIEW",
+          "risk_scores": {
+            "NO_EVIDENCE": 0.0007598193478770554,
+            "REVIEW": 0.9913074374198914,
+            "HIGH_EVIDENCE": 0.00793272815644741
+          }
+        },
+        {
+          "case_id": "IND200_071",
+          "subset": "HARD_NEGATIVE",
+          "gold": "NO_EVIDENCE",
+          "prediction": "HIGH_EVIDENCE",
+          "risk_scores": {
+            "NO_EVIDENCE": 0.398245245218277,
+            "REVIEW": 0.17483054101467133,
+            "HIGH_EVIDENCE": 0.4269241988658905
+          }
+        },
+        {
+          "case_id": "IND200_073",
+          "subset": "HARD_NEGATIVE",
+          "gold": "NO_EVIDENCE",
+          "prediction": "HIGH_EVIDENCE",
+          "risk_scores": {
+            "NO_EVIDENCE": 0.0022244234569370747,
+            "REVIEW": 0.002640059683471918,
+            "HIGH_EVIDENCE": 0.995135486125946
+          }
+        },
+        {
+          "case_id": "IND200_074",
+          "subset": "HARD_NEGATIVE",
+          "gold": "NO_EVIDENCE",
+          "prediction": "REVIEW",
+          "risk_scores": {
+            "NO_EVIDENCE": 0.14400145411491394,
+            "REVIEW": 0.4343774914741516,
+            "HIGH_EVIDENCE": 0.42162102460861206
+          }
+        },
+        {
+          "case_id": "IND200_075",
+          "subset": "HARD_NEGATIVE",
+          "gold": "NO_EVIDENCE",
+          "prediction": "HIGH_EVIDENCE",
+          "risk_scores": {
+            "NO_EVIDENCE": 0.45539331436157227,
+            "REVIEW": 0.08332686871290207,
+            "HIGH_EVIDENCE": 0.46127983927726746
+          }
+        },
+        {
+          "case_id": "IND200_076",
+          "subset": "HARD_NEGATIVE",
+          "gold": "NO_EVIDENCE",
+          "prediction": "REVIEW",
+          "risk_scores": {
+            "NO_EVIDENCE": 0.0022929715923964977,
+            "REVIEW": 0.7382311224937439,
+            "HIGH_EVIDENCE": 0.2594759166240692
+          }
+        },
+        {
+          "case_id": "IND200_077",
+          "subset": "HARD_NEGATIVE",
+          "gold": "NO_EVIDENCE",
+          "prediction": "REVIEW",
+          "risk_scores": {
+            "NO_EVIDENCE": 0.3374868929386139,
+            "REVIEW": 0.38705453276634216,
+            "HIGH_EVIDENCE": 0.27545854449272156
+          }
+        },
+        {
+          "case_id": "IND200_079",
+          "subset": "HARD_NEGATIVE",
+          "gold": "NO_EVIDENCE",
+          "prediction": "REVIEW",
+          "risk_scores": {
+            "NO_EVIDENCE": 0.027724649757146835,
+            "REVIEW": 0.9614027142524719,
+            "HIGH_EVIDENCE": 0.010872614569962025
+          }
+        },
+        {
+          "case_id": "IND200_082",
+          "subset": "HARD_NEGATIVE",
+          "gold": "NO_EVIDENCE",
+          "prediction": "HIGH_EVIDENCE",
+          "risk_scores": {
+            "NO_EVIDENCE": 0.0011853635078296065,
+            "REVIEW": 0.0010671676136553288,
+            "HIGH_EVIDENCE": 0.9977474808692932
+          }
+        },
+        {
+          "case_id": "IND200_084",
+          "subset": "HARD_NEGATIVE",
+          "gold": "NO_EVIDENCE",
+          "prediction": "HIGH_EVIDENCE",
+          "risk_scores": {
+            "NO_EVIDENCE": 0.011158522218465805,
+            "REVIEW": 0.3496205806732178,
+            "HIGH_EVIDENCE": 0.6392208933830261
+          }
+        },
+        {
+          "case_id": "IND200_086",
+          "subset": "HARD_NEGATIVE",
+          "gold": "NO_EVIDENCE",
+          "prediction": "REVIEW",
+          "risk_scores": {
+            "NO_EVIDENCE": 0.33663803339004517,
+            "REVIEW": 0.38275444507598877,
+            "HIGH_EVIDENCE": 0.2806074917316437
+          }
+        },
+        {
+          "case_id": "IND200_087",
+          "subset": "HARD_NEGATIVE",
+          "gold": "NO_EVIDENCE",
+          "prediction": "HIGH_EVIDENCE",
+          "risk_scores": {
+            "NO_EVIDENCE": 0.00041686216718517244,
+            "REVIEW": 0.0011059476528316736,
+            "HIGH_EVIDENCE": 0.9984771609306335
+          }
+        },
+        {
+          "case_id": "IND200_088",
+          "subset": "HARD_NEGATIVE",
+          "gold": "NO_EVIDENCE",
+          "prediction": "HIGH_EVIDENCE",
+          "risk_scores": {
+            "NO_EVIDENCE": 0.13646017014980316,
+            "REVIEW": 0.26674607396125793,
+            "HIGH_EVIDENCE": 0.5967937707901001
+          }
+        },
+        {
+          "case_id": "IND200_090",
+          "subset": "HARD_NEGATIVE",
+          "gold": "NO_EVIDENCE",
+          "prediction": "HIGH_EVIDENCE",
+          "risk_scores": {
+            "NO_EVIDENCE": 0.1715487688779831,
+            "REVIEW": 0.31375518441200256,
+            "HIGH_EVIDENCE": 0.5146960020065308
+          }
+        },
+        {
+          "case_id": "IND200_094",
+          "subset": "HARD_NEGATIVE",
+          "gold": "NO_EVIDENCE",
+          "prediction": "HIGH_EVIDENCE",
+          "risk_scores": {
+            "NO_EVIDENCE": 0.004389986861497164,
+            "REVIEW": 0.017791226506233215,
+            "HIGH_EVIDENCE": 0.9778188467025757
+          }
+        },
+        {
+          "case_id": "IND200_095",
+          "subset": "HARD_NEGATIVE",
+          "gold": "NO_EVIDENCE",
+          "prediction": "HIGH_EVIDENCE",
+          "risk_scores": {
+            "NO_EVIDENCE": 0.3517674505710602,
+            "REVIEW": 0.1549353301525116,
+            "HIGH_EVIDENCE": 0.49329715967178345
+          }
+        },
+        {
+          "case_id": "IND200_097",
+          "subset": "HARD_NEGATIVE",
+          "gold": "NO_EVIDENCE",
+          "prediction": "REVIEW",
+          "risk_scores": {
+            "NO_EVIDENCE": 0.3758312165737152,
+            "REVIEW": 0.4916854500770569,
+            "HIGH_EVIDENCE": 0.1324833482503891
+          }
+        },
+        {
+          "case_id": "IND200_098",
+          "subset": "HARD_NEGATIVE",
+          "gold": "NO_EVIDENCE",
+          "prediction": "HIGH_EVIDENCE",
+          "risk_scores": {
+            "NO_EVIDENCE": 0.17356474697589874,
+            "REVIEW": 0.030074812471866608,
+            "HIGH_EVIDENCE": 0.7963603734970093
+          }
+        },
+        {
+          "case_id": "IND200_102",
+          "subset": "HARD_NEGATIVE",
+          "gold": "NO_EVIDENCE",
+          "prediction": "HIGH_EVIDENCE",
+          "risk_scores": {
+            "NO_EVIDENCE": 0.004928702022880316,
+            "REVIEW": 0.05478809401392937,
+            "HIGH_EVIDENCE": 0.9402831196784973
+          }
+        },
+        {
+          "case_id": "IND200_103",
+          "subset": "HARD_NEGATIVE",
+          "gold": "NO_EVIDENCE",
+          "prediction": "REVIEW",
+          "risk_scores": {
+            "NO_EVIDENCE": 0.3285614252090454,
+            "REVIEW": 0.5697562098503113,
+            "HIGH_EVIDENCE": 0.10168235003948212
+          }
+        },
+        {
+          "case_id": "IND200_104",
+          "subset": "HARD_NEGATIVE",
+          "gold": "NO_EVIDENCE",
+          "prediction": "HIGH_EVIDENCE",
+          "risk_scores": {
+            "NO_EVIDENCE": 0.11551100015640259,
+            "REVIEW": 0.007906225509941578,
+            "HIGH_EVIDENCE": 0.8765828013420105
+          }
+        },
+        {
+          "case_id": "IND200_105",
+          "subset": "HARD_NEGATIVE",
+          "gold": "NO_EVIDENCE",
+          "prediction": "REVIEW",
+          "risk_scores": {
+            "NO_EVIDENCE": 0.3392862379550934,
+            "REVIEW": 0.5264946818351746,
+            "HIGH_EVIDENCE": 0.13421905040740967
+          }
+        },
+        {
+          "case_id": "IND200_106",
+          "subset": "HARD_NEGATIVE",
+          "gold": "NO_EVIDENCE",
+          "prediction": "HIGH_EVIDENCE",
+          "risk_scores": {
+            "NO_EVIDENCE": 0.3539290130138397,
+            "REVIEW": 0.0286233089864254,
+            "HIGH_EVIDENCE": 0.6174476742744446
+          }
+        },
+        {
+          "case_id": "IND200_108",
+          "subset": "HARD_NEGATIVE",
+          "gold": "NO_EVIDENCE",
+          "prediction": "HIGH_EVIDENCE",
+          "risk_scores": {
+            "NO_EVIDENCE": 0.00034901968319900334,
+            "REVIEW": 0.004831061232835054,
+            "HIGH_EVIDENCE": 0.9948199391365051
+          }
+        },
+        {
+          "case_id": "IND200_110",
+          "subset": "HARD_NEGATIVE",
+          "gold": "NO_EVIDENCE",
+          "prediction": "HIGH_EVIDENCE",
+          "risk_scores": {
+            "NO_EVIDENCE": 0.04270261898636818,
+            "REVIEW": 0.07891421765089035,
+            "HIGH_EVIDENCE": 0.878383219242096
+          }
+        },
+        {
+          "case_id": "IND200_111",
+          "subset": "HARD_NEGATIVE",
+          "gold": "NO_EVIDENCE",
+          "prediction": "REVIEW",
+          "risk_scores": {
+            "NO_EVIDENCE": 0.2573948800563812,
+            "REVIEW": 0.6041432619094849,
+            "HIGH_EVIDENCE": 0.1384618878364563
+          }
+        },
+        {
+          "case_id": "IND200_112",
+          "subset": "HARD_NEGATIVE",
+          "gold": "NO_EVIDENCE",
+          "prediction": "HIGH_EVIDENCE",
+          "risk_scores": {
+            "NO_EVIDENCE": 0.11156611144542694,
+            "REVIEW": 0.01943713240325451,
+            "HIGH_EVIDENCE": 0.8689967393875122
+          }
+        },
+        {
+          "case_id": "IND200_113",
+          "subset": "HARD_NEGATIVE",
+          "gold": "NO_EVIDENCE",
+          "prediction": "HIGH_EVIDENCE",
+          "risk_scores": {
+            "NO_EVIDENCE": 0.11638255417346954,
+            "REVIEW": 0.016606071963906288,
+            "HIGH_EVIDENCE": 0.8670113682746887
+          }
+        },
+        {
+          "case_id": "IND200_114",
+          "subset": "HARD_NEGATIVE",
+          "gold": "NO_EVIDENCE",
+          "prediction": "HIGH_EVIDENCE",
+          "risk_scores": {
+            "NO_EVIDENCE": 0.14804881811141968,
+            "REVIEW": 0.09368109703063965,
+            "HIGH_EVIDENCE": 0.7582700252532959
+          }
+        },
+        {
+          "case_id": "IND200_115",
+          "subset": "HARD_NEGATIVE",
+          "gold": "NO_EVIDENCE",
+          "prediction": "HIGH_EVIDENCE",
+          "risk_scores": {
+            "NO_EVIDENCE": 0.1600208282470703,
+            "REVIEW": 0.2254333347082138,
+            "HIGH_EVIDENCE": 0.6145458221435547
+          }
+        },
+        {
+          "case_id": "IND200_116",
+          "subset": "HARD_NEGATIVE",
+          "gold": "NO_EVIDENCE",
+          "prediction": "REVIEW",
+          "risk_scores": {
+            "NO_EVIDENCE": 0.08015100657939911,
+            "REVIEW": 0.8621355891227722,
+            "HIGH_EVIDENCE": 0.05771337077021599
+          }
+        },
+        {
+          "case_id": "IND200_117",
+          "subset": "HARD_NEGATIVE",
+          "gold": "NO_EVIDENCE",
+          "prediction": "HIGH_EVIDENCE",
+          "risk_scores": {
+            "NO_EVIDENCE": 0.0004977878415957093,
+            "REVIEW": 0.0032179774716496468,
+            "HIGH_EVIDENCE": 0.9962843060493469
+          }
+        },
+        {
+          "case_id": "IND200_118",
+          "subset": "HARD_NEGATIVE",
+          "gold": "NO_EVIDENCE",
+          "prediction": "HIGH_EVIDENCE",
+          "risk_scores": {
+            "NO_EVIDENCE": 0.10606846213340759,
+            "REVIEW": 0.3507438898086548,
+            "HIGH_EVIDENCE": 0.5431876182556152
+          }
+        },
+        {
+          "case_id": "IND200_119",
+          "subset": "HARD_NEGATIVE",
+          "gold": "NO_EVIDENCE",
+          "prediction": "HIGH_EVIDENCE",
+          "risk_scores": {
+            "NO_EVIDENCE": 0.046442143619060516,
+            "REVIEW": 0.007948102429509163,
+            "HIGH_EVIDENCE": 0.9456098675727844
+          }
+        },
+        {
+          "case_id": "IND200_120",
+          "subset": "HARD_NEGATIVE",
+          "gold": "NO_EVIDENCE",
+          "prediction": "REVIEW",
+          "risk_scores": {
+            "NO_EVIDENCE": 0.03457772731781006,
+            "REVIEW": 0.6882808208465576,
+            "HIGH_EVIDENCE": 0.27714142203330994
+          }
+        },
+        {
+          "case_id": "IND200_121",
+          "subset": "HARD_NEGATIVE",
+          "gold": "NO_EVIDENCE",
+          "prediction": "HIGH_EVIDENCE",
+          "risk_scores": {
+            "NO_EVIDENCE": 0.05562230572104454,
+            "REVIEW": 0.0056152637116611,
+            "HIGH_EVIDENCE": 0.938762366771698
+          }
+        },
+        {
+          "case_id": "IND200_122",
+          "subset": "HARD_NEGATIVE",
+          "gold": "NO_EVIDENCE",
+          "prediction": "REVIEW",
+          "risk_scores": {
+            "NO_EVIDENCE": 0.046322841197252274,
+            "REVIEW": 0.9318270683288574,
+            "HIGH_EVIDENCE": 0.021850142627954483
+          }
+        },
+        {
+          "case_id": "IND200_125",
+          "subset": "HARD_NEGATIVE",
+          "gold": "NO_EVIDENCE",
+          "prediction": "HIGH_EVIDENCE",
+          "risk_scores": {
+            "NO_EVIDENCE": 0.0031852046959102154,
+            "REVIEW": 0.008207174949347973,
+            "HIGH_EVIDENCE": 0.9886077046394348
+          }
+        },
+        {
+          "case_id": "IND200_126",
+          "subset": "HARD_NEGATIVE",
+          "gold": "NO_EVIDENCE",
+          "prediction": "HIGH_EVIDENCE",
+          "risk_scores": {
+            "NO_EVIDENCE": 0.143097385764122,
+            "REVIEW": 0.035942647606134415,
+            "HIGH_EVIDENCE": 0.8209599256515503
+          }
+        },
+        {
+          "case_id": "IND200_127",
+          "subset": "HARD_NEGATIVE",
+          "gold": "NO_EVIDENCE",
+          "prediction": "REVIEW",
+          "risk_scores": {
+            "NO_EVIDENCE": 0.0730985552072525,
+            "REVIEW": 0.7421953678131104,
+            "HIGH_EVIDENCE": 0.18470606207847595
+          }
+        },
+        {
+          "case_id": "IND200_128",
+          "subset": "HARD_NEGATIVE",
+          "gold": "NO_EVIDENCE",
+          "prediction": "HIGH_EVIDENCE",
+          "risk_scores": {
+            "NO_EVIDENCE": 0.00037302449345588684,
+            "REVIEW": 0.001001823926344514,
+            "HIGH_EVIDENCE": 0.9986252784729004
+          }
+        },
+        {
+          "case_id": "IND200_131",
+          "subset": "HARD_NEGATIVE",
+          "gold": "NO_EVIDENCE",
+          "prediction": "HIGH_EVIDENCE",
+          "risk_scores": {
+            "NO_EVIDENCE": 0.1785012036561966,
+            "REVIEW": 0.3356195390224457,
+            "HIGH_EVIDENCE": 0.4858793020248413
+          }
+        },
+        {
+          "case_id": "IND200_132",
+          "subset": "HARD_NEGATIVE",
+          "gold": "NO_EVIDENCE",
+          "prediction": "HIGH_EVIDENCE",
+          "risk_scores": {
+            "NO_EVIDENCE": 0.029608355835080147,
+            "REVIEW": 0.0978650450706482,
+            "HIGH_EVIDENCE": 0.8725266456604004
+          }
+        },
+        {
+          "case_id": "IND200_134",
+          "subset": "HARD_NEGATIVE",
+          "gold": "NO_EVIDENCE",
+          "prediction": "HIGH_EVIDENCE",
+          "risk_scores": {
+            "NO_EVIDENCE": 0.26972702145576477,
+            "REVIEW": 0.015175196342170238,
+            "HIGH_EVIDENCE": 0.7150977849960327
+          }
+        },
+        {
+          "case_id": "IND200_135",
+          "subset": "HARD_NEGATIVE",
+          "gold": "NO_EVIDENCE",
+          "prediction": "HIGH_EVIDENCE",
+          "risk_scores": {
+            "NO_EVIDENCE": 0.2995872497558594,
+            "REVIEW": 0.21962730586528778,
+            "HIGH_EVIDENCE": 0.48078539967536926
+          }
+        },
+        {
+          "case_id": "IND200_137",
+          "subset": "EASY_NEGATIVE",
+          "gold": "NO_EVIDENCE",
+          "prediction": "REVIEW",
+          "risk_scores": {
+            "NO_EVIDENCE": 0.033006954938173294,
+            "REVIEW": 0.9637531638145447,
+            "HIGH_EVIDENCE": 0.0032398824114352465
+          }
+        },
+        {
+          "case_id": "IND200_156",
+          "subset": "EASY_NEGATIVE",
+          "gold": "NO_EVIDENCE",
+          "prediction": "REVIEW",
+          "risk_scores": {
+            "NO_EVIDENCE": 0.3996378779411316,
+            "REVIEW": 0.5714050531387329,
+            "HIGH_EVIDENCE": 0.02895704284310341
+          }
+        },
+        {
+          "case_id": "IND200_158",
+          "subset": "EASY_NEGATIVE",
+          "gold": "NO_EVIDENCE",
+          "prediction": "REVIEW",
+          "risk_scores": {
+            "NO_EVIDENCE": 0.38280776143074036,
+            "REVIEW": 0.4783274233341217,
+            "HIGH_EVIDENCE": 0.13886485993862152
+          }
+        },
+        {
+          "case_id": "IND200_161",
+          "subset": "EASY_NEGATIVE",
+          "gold": "NO_EVIDENCE",
+          "prediction": "REVIEW",
+          "risk_scores": {
+            "NO_EVIDENCE": 0.007619821932166815,
+            "REVIEW": 0.9898390769958496,
+            "HIGH_EVIDENCE": 0.0025411497335880995
+          }
+        },
+        {
+          "case_id": "IND200_166",
+          "subset": "EASY_NEGATIVE",
+          "gold": "NO_EVIDENCE",
+          "prediction": "HIGH_EVIDENCE",
+          "risk_scores": {
+            "NO_EVIDENCE": 0.24297529458999634,
+            "REVIEW": 0.23816753923892975,
+            "HIGH_EVIDENCE": 0.5188571810722351
+          }
+        },
+        {
+          "case_id": "IND200_167",
+          "subset": "EASY_NEGATIVE",
+          "gold": "NO_EVIDENCE",
+          "prediction": "REVIEW",
+          "risk_scores": {
+            "NO_EVIDENCE": 0.00756573211401701,
+            "REVIEW": 0.9892082810401917,
+            "HIGH_EVIDENCE": 0.0032260112930089235
+          }
+        },
+        {
+          "case_id": "IND200_168",
+          "subset": "EASY_NEGATIVE",
+          "gold": "NO_EVIDENCE",
+          "prediction": "REVIEW",
+          "risk_scores": {
+            "NO_EVIDENCE": 0.001725193695165217,
+            "REVIEW": 0.9970863461494446,
+            "HIGH_EVIDENCE": 0.001188429188914597
+          }
+        },
+        {
+          "case_id": "IND200_169",
+          "subset": "EASY_NEGATIVE",
+          "gold": "NO_EVIDENCE",
+          "prediction": "REVIEW",
+          "risk_scores": {
+            "NO_EVIDENCE": 0.002751855179667473,
+            "REVIEW": 0.9967415928840637,
+            "HIGH_EVIDENCE": 0.000506569049321115
+          }
+        },
+        {
+          "case_id": "IND200_170",
+          "subset": "EASY_NEGATIVE",
+          "gold": "NO_EVIDENCE",
+          "prediction": "REVIEW",
+          "risk_scores": {
+            "NO_EVIDENCE": 0.11512105166912079,
+            "REVIEW": 0.8414821028709412,
+            "HIGH_EVIDENCE": 0.04339689016342163
+          }
+        },
+        {
+          "case_id": "IND200_171",
+          "subset": "EASY_NEGATIVE",
+          "gold": "NO_EVIDENCE",
+          "prediction": "REVIEW",
+          "risk_scores": {
+            "NO_EVIDENCE": 0.004424688406288624,
+            "REVIEW": 0.9942020773887634,
+            "HIGH_EVIDENCE": 0.0013731722719967365
+          }
+        },
+        {
+          "case_id": "IND200_172",
+          "subset": "EASY_NEGATIVE",
+          "gold": "NO_EVIDENCE",
+          "prediction": "HIGH_EVIDENCE",
+          "risk_scores": {
+            "NO_EVIDENCE": 0.0994245707988739,
+            "REVIEW": 0.03406723961234093,
+            "HIGH_EVIDENCE": 0.8665081262588501
+          }
+        },
+        {
+          "case_id": "IND200_173",
+          "subset": "EASY_NEGATIVE",
+          "gold": "NO_EVIDENCE",
+          "prediction": "REVIEW",
+          "risk_scores": {
+            "NO_EVIDENCE": 0.1322842240333557,
+            "REVIEW": 0.8616845607757568,
+            "HIGH_EVIDENCE": 0.006031186785548925
+          }
+        },
+        {
+          "case_id": "IND200_174",
+          "subset": "EASY_NEGATIVE",
+          "gold": "NO_EVIDENCE",
+          "prediction": "REVIEW",
+          "risk_scores": {
+            "NO_EVIDENCE": 0.3222968876361847,
+            "REVIEW": 0.6135590672492981,
+            "HIGH_EVIDENCE": 0.06414400786161423
+          }
+        },
+        {
+          "case_id": "IND200_176",
+          "subset": "EASY_NEGATIVE",
+          "gold": "NO_EVIDENCE",
+          "prediction": "REVIEW",
+          "risk_scores": {
+            "NO_EVIDENCE": 0.42032402753829956,
+            "REVIEW": 0.5637117028236389,
+            "HIGH_EVIDENCE": 0.015964262187480927
+          }
+        },
+        {
+          "case_id": "IND200_181",
+          "subset": "EASY_NEGATIVE",
+          "gold": "NO_EVIDENCE",
+          "prediction": "REVIEW",
+          "risk_scores": {
+            "NO_EVIDENCE": 0.3408600687980652,
+            "REVIEW": 0.621978223323822,
+            "HIGH_EVIDENCE": 0.03716171532869339
+          }
+        },
+        {
+          "case_id": "IND200_182",
+          "subset": "EASY_NEGATIVE",
+          "gold": "NO_EVIDENCE",
+          "prediction": "REVIEW",
+          "risk_scores": {
+            "NO_EVIDENCE": 0.17550817131996155,
+            "REVIEW": 0.5141941905021667,
+            "HIGH_EVIDENCE": 0.3102976083755493
+          }
+        },
+        {
+          "case_id": "IND200_183",
+          "subset": "EASY_NEGATIVE",
+          "gold": "NO_EVIDENCE",
+          "prediction": "REVIEW",
+          "risk_scores": {
+            "NO_EVIDENCE": 0.2574099004268646,
+            "REVIEW": 0.6980723142623901,
+            "HIGH_EVIDENCE": 0.04451780766248703
+          }
+        },
+        {
+          "case_id": "IND200_184",
+          "subset": "EASY_NEGATIVE",
+          "gold": "NO_EVIDENCE",
+          "prediction": "REVIEW",
+          "risk_scores": {
+            "NO_EVIDENCE": 0.1883402168750763,
+            "REVIEW": 0.6681667566299438,
+            "HIGH_EVIDENCE": 0.14349305629730225
+          }
+        },
+        {
+          "case_id": "IND200_185",
+          "subset": "EASY_NEGATIVE",
+          "gold": "NO_EVIDENCE",
+          "prediction": "REVIEW",
+          "risk_scores": {
+            "NO_EVIDENCE": 0.15943285822868347,
+            "REVIEW": 0.8309944272041321,
+            "HIGH_EVIDENCE": 0.00957272294908762
+          }
+        },
+        {
+          "case_id": "IND200_186",
+          "subset": "EASY_NEGATIVE",
+          "gold": "NO_EVIDENCE",
+          "prediction": "HIGH_EVIDENCE",
+          "risk_scores": {
+            "NO_EVIDENCE": 0.33091530203819275,
+            "REVIEW": 0.28620293736457825,
+            "HIGH_EVIDENCE": 0.382881760597229
+          }
+        },
+        {
+          "case_id": "IND200_192",
+          "subset": "EASY_NEGATIVE",
+          "gold": "NO_EVIDENCE",
+          "prediction": "REVIEW",
+          "risk_scores": {
+            "NO_EVIDENCE": 0.0876607596874237,
+            "REVIEW": 0.9022119641304016,
+            "HIGH_EVIDENCE": 0.010127255693078041
+          }
+        },
+        {
+          "case_id": "IND200_195",
+          "subset": "EASY_NEGATIVE",
+          "gold": "NO_EVIDENCE",
+          "prediction": "REVIEW",
+          "risk_scores": {
+            "NO_EVIDENCE": 0.2817748785018921,
+            "REVIEW": 0.6652687788009644,
+            "HIGH_EVIDENCE": 0.052956387400627136
+          }
+        },
+        {
+          "case_id": "IND200_196",
+          "subset": "EASY_NEGATIVE",
+          "gold": "NO_EVIDENCE",
+          "prediction": "REVIEW",
+          "risk_scores": {
+            "NO_EVIDENCE": 0.2837478816509247,
+            "REVIEW": 0.6420449614524841,
+            "HIGH_EVIDENCE": 0.07420708984136581
+          }
+        },
+        {
+          "case_id": "IND200_197",
+          "subset": "EASY_NEGATIVE",
+          "gold": "NO_EVIDENCE",
+          "prediction": "HIGH_EVIDENCE",
+          "risk_scores": {
+            "NO_EVIDENCE": 0.15551349520683289,
+            "REVIEW": 0.16461500525474548,
+            "HIGH_EVIDENCE": 0.6798714995384216
+          }
+        },
+        {
+          "case_id": "IND200_199",
+          "subset": "EASY_NEGATIVE",
+          "gold": "NO_EVIDENCE",
+          "prediction": "REVIEW",
+          "risk_scores": {
+            "NO_EVIDENCE": 0.20766356587409973,
+            "REVIEW": 0.7770091891288757,
+            "HIGH_EVIDENCE": 0.015327324159443378
+          }
+        },
+        {
+          "case_id": "IND200_200",
+          "subset": "EASY_NEGATIVE",
+          "gold": "NO_EVIDENCE",
+          "prediction": "REVIEW",
+          "risk_scores": {
+            "NO_EVIDENCE": 0.04484559968113899,
+            "REVIEW": 0.9469925761222839,
+            "HIGH_EVIDENCE": 0.008161818608641624
+          }
+        }
+      ],
+      "predictions_sha256": "f2350f8c7fd4daaddbae9f857603985a722f7753f04fb2604771ae15dfad0f96",
+      "internal_gold_sha256": "40807e46939000a487e5975b5b51942a11ffffb1a4ced3e66a5fa62b5fa7d2ef",
+      "macro_f1_supported_labels": 0.6457450904890258,
+      "positive_warning_recall": 0.9142857142857143
+    },
+    "public": {
+      "cases": 200,
+      "gold_distribution": {
+        "HIGH_EVIDENCE": 70,
+        "NO_EVIDENCE": 130
+      },
+      "prediction_distribution": {
+        "HIGH_EVIDENCE": 72,
+        "REVIEW": 26,
+        "NO_EVIDENCE": 102
+      },
+      "strict_accuracy": 0.765,
+      "strict_macro_f1_all_3_labels": 0.5452889752306945,
+      "classification_report_strict": {
+        "NO_EVIDENCE": {
+          "precision": 0.9313725490196079,
+          "recall": 0.7307692307692307,
+          "f1-score": 0.8189655172413793,
+          "support": 130.0
+        },
+        "REVIEW": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 0.0
+        },
+        "HIGH_EVIDENCE": {
+          "precision": 0.8055555555555556,
+          "recall": 0.8285714285714286,
+          "f1-score": 0.8169014084507042,
+          "support": 70.0
+        },
+        "accuracy": 0.765,
+        "macro avg": {
+          "precision": 0.5789760348583878,
+          "recall": 0.5197802197802198,
+          "f1-score": 0.5452889752306945,
+          "support": 200.0
+        },
+        "weighted avg": {
+          "precision": 0.8873366013071896,
+          "recall": 0.765,
+          "f1-score": 0.8182430791646431,
+          "support": 200.0
+        }
+      },
+      "confusion_matrix": {
+        "labels": [
+          "NO_EVIDENCE",
+          "REVIEW",
+          "HIGH_EVIDENCE"
+        ],
+        "values": [
+          [
+            95,
+            21,
+            14
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            7,
+            5,
+            58
+          ]
+        ]
+      },
+      "operational_policy": "POSITIVE accepts REVIEW/HIGH_EVIDENCE; HARD_NEGATIVE accepts NO_EVIDENCE/REVIEW; EASY_NEGATIVE accepts NO_EVIDENCE.",
+      "operational_accuracy": 0.865,
+      "subsets": {
+        "EASY_NEGATIVE": {
+          "cases": 65,
+          "strict_correct": 58,
+          "strict_accuracy": 0.8923076923076924,
+          "operational_correct": 58,
+          "operational_accuracy": 0.8923076923076924,
+          "prediction_counts": {
+            "NO_EVIDENCE": 58,
+            "REVIEW": 6,
+            "HIGH_EVIDENCE": 1
+          }
+        },
+        "HARD_NEGATIVE": {
+          "cases": 65,
+          "strict_correct": 37,
+          "strict_accuracy": 0.5692307692307692,
+          "operational_correct": 52,
+          "operational_accuracy": 0.8,
+          "prediction_counts": {
+            "NO_EVIDENCE": 37,
+            "REVIEW": 15,
+            "HIGH_EVIDENCE": 13
+          }
+        },
+        "POSITIVE": {
+          "cases": 70,
+          "strict_correct": 58,
+          "strict_accuracy": 0.8285714285714286,
+          "operational_correct": 63,
+          "operational_accuracy": 0.9,
+          "prediction_counts": {
+            "HIGH_EVIDENCE": 58,
+            "REVIEW": 5,
+            "NO_EVIDENCE": 7
+          }
+        }
+      },
+      "strict_errors": [
+        {
+          "case_id": "IND200_003",
+          "subset": "POSITIVE",
+          "gold": "HIGH_EVIDENCE",
+          "prediction": "REVIEW",
+          "risk_scores": {
+            "HIGH_EVIDENCE": 0.2419917732477188,
+            "NO_EVIDENCE": 0.1883096545934677,
+            "REVIEW": 0.5696985721588135
+          }
+        },
+        {
+          "case_id": "IND200_005",
+          "subset": "POSITIVE",
+          "gold": "HIGH_EVIDENCE",
+          "prediction": "REVIEW",
+          "risk_scores": {
+            "HIGH_EVIDENCE": 0.27939608693122864,
+            "NO_EVIDENCE": 0.3539646863937378,
+            "REVIEW": 0.36663925647735596
+          }
+        },
+        {
+          "case_id": "IND200_007",
+          "subset": "POSITIVE",
+          "gold": "HIGH_EVIDENCE",
+          "prediction": "NO_EVIDENCE",
+          "risk_scores": {
+            "HIGH_EVIDENCE": 0.22928982973098755,
+            "NO_EVIDENCE": 0.39528903365135193,
+            "REVIEW": 0.3754211366176605
+          }
+        },
+        {
+          "case_id": "IND200_009",
+          "subset": "POSITIVE",
+          "gold": "HIGH_EVIDENCE",
+          "prediction": "REVIEW",
+          "risk_scores": {
+            "HIGH_EVIDENCE": 0.25721538066864014,
+            "NO_EVIDENCE": 0.08914659172296524,
+            "REVIEW": 0.6536380052566528
+          }
+        },
+        {
+          "case_id": "IND200_019",
+          "subset": "POSITIVE",
+          "gold": "HIGH_EVIDENCE",
+          "prediction": "REVIEW",
+          "risk_scores": {
+            "HIGH_EVIDENCE": 0.26009601354599,
+            "NO_EVIDENCE": 0.13154487311840057,
+            "REVIEW": 0.6083590984344482
+          }
+        },
+        {
+          "case_id": "IND200_024",
+          "subset": "POSITIVE",
+          "gold": "HIGH_EVIDENCE",
+          "prediction": "NO_EVIDENCE",
+          "risk_scores": {
+            "HIGH_EVIDENCE": 0.1721966564655304,
+            "NO_EVIDENCE": 0.8033378720283508,
+            "REVIEW": 0.024465540423989296
+          }
+        },
+        {
+          "case_id": "IND200_025",
+          "subset": "POSITIVE",
+          "gold": "HIGH_EVIDENCE",
+          "prediction": "NO_EVIDENCE",
+          "risk_scores": {
+            "HIGH_EVIDENCE": 0.026610538363456726,
+            "NO_EVIDENCE": 0.8225436210632324,
+            "REVIEW": 0.15084590017795563
+          }
+        },
+        {
+          "case_id": "IND200_049",
+          "subset": "POSITIVE",
+          "gold": "HIGH_EVIDENCE",
+          "prediction": "NO_EVIDENCE",
+          "risk_scores": {
+            "HIGH_EVIDENCE": 0.07417997717857361,
+            "NO_EVIDENCE": 0.7416008114814758,
+            "REVIEW": 0.18421916663646698
+          }
+        },
+        {
+          "case_id": "IND200_051",
+          "subset": "POSITIVE",
+          "gold": "HIGH_EVIDENCE",
+          "prediction": "NO_EVIDENCE",
+          "risk_scores": {
+            "HIGH_EVIDENCE": 0.18061721324920654,
+            "NO_EVIDENCE": 0.7457180619239807,
+            "REVIEW": 0.07366468757390976
+          }
+        },
+        {
+          "case_id": "IND200_062",
+          "subset": "POSITIVE",
+          "gold": "HIGH_EVIDENCE",
+          "prediction": "NO_EVIDENCE",
+          "risk_scores": {
+            "HIGH_EVIDENCE": 0.25486260652542114,
+            "NO_EVIDENCE": 0.4955064356327057,
+            "REVIEW": 0.2496308833360672
+          }
+        },
+        {
+          "case_id": "IND200_069",
+          "subset": "POSITIVE",
+          "gold": "HIGH_EVIDENCE",
+          "prediction": "REVIEW",
+          "risk_scores": {
+            "HIGH_EVIDENCE": 0.047232210636138916,
+            "NO_EVIDENCE": 0.10583547502756119,
+            "REVIEW": 0.8469322919845581
+          }
+        },
+        {
+          "case_id": "IND200_070",
+          "subset": "POSITIVE",
+          "gold": "HIGH_EVIDENCE",
+          "prediction": "NO_EVIDENCE",
+          "risk_scores": {
+            "HIGH_EVIDENCE": 0.3066369593143463,
+            "NO_EVIDENCE": 0.5821107029914856,
+            "REVIEW": 0.1112523302435875
+          }
+        },
+        {
+          "case_id": "IND200_072",
+          "subset": "HARD_NEGATIVE",
+          "gold": "NO_EVIDENCE",
+          "prediction": "REVIEW",
+          "risk_scores": {
+            "HIGH_EVIDENCE": 0.1696632355451584,
+            "NO_EVIDENCE": 0.27417540550231934,
+            "REVIEW": 0.5561613440513611
+          }
+        },
+        {
+          "case_id": "IND200_073",
+          "subset": "HARD_NEGATIVE",
+          "gold": "NO_EVIDENCE",
+          "prediction": "HIGH_EVIDENCE",
+          "risk_scores": {
+            "HIGH_EVIDENCE": 0.9932314157485962,
+            "NO_EVIDENCE": 0.0026308423839509487,
+            "REVIEW": 0.00413771066814661
+          }
+        },
+        {
+          "case_id": "IND200_076",
+          "subset": "HARD_NEGATIVE",
+          "gold": "NO_EVIDENCE",
+          "prediction": "REVIEW",
+          "risk_scores": {
+            "HIGH_EVIDENCE": 0.05482669919729233,
+            "NO_EVIDENCE": 0.008848548866808414,
+            "REVIEW": 0.9363247156143188
+          }
+        },
+        {
+          "case_id": "IND200_077",
+          "subset": "HARD_NEGATIVE",
+          "gold": "NO_EVIDENCE",
+          "prediction": "REVIEW",
+          "risk_scores": {
+            "HIGH_EVIDENCE": 0.39599478244781494,
+            "NO_EVIDENCE": 0.0842001885175705,
+            "REVIEW": 0.5198050737380981
+          }
+        },
+        {
+          "case_id": "IND200_079",
+          "subset": "HARD_NEGATIVE",
+          "gold": "NO_EVIDENCE",
+          "prediction": "REVIEW",
+          "risk_scores": {
+            "HIGH_EVIDENCE": 0.0712766945362091,
+            "NO_EVIDENCE": 0.32304760813713074,
+            "REVIEW": 0.6056756973266602
+          }
+        },
+        {
+          "case_id": "IND200_083",
+          "subset": "HARD_NEGATIVE",
+          "gold": "NO_EVIDENCE",
+          "prediction": "HIGH_EVIDENCE",
+          "risk_scores": {
+            "HIGH_EVIDENCE": 0.3884378671646118,
+            "NO_EVIDENCE": 0.3441033959388733,
+            "REVIEW": 0.2674586772918701
+          }
+        },
+        {
+          "case_id": "IND200_084",
+          "subset": "HARD_NEGATIVE",
+          "gold": "NO_EVIDENCE",
+          "prediction": "REVIEW",
+          "risk_scores": {
+            "HIGH_EVIDENCE": 0.14192764461040497,
+            "NO_EVIDENCE": 0.03193141147494316,
+            "REVIEW": 0.8261409401893616
+          }
+        },
+        {
+          "case_id": "IND200_087",
+          "subset": "HARD_NEGATIVE",
+          "gold": "NO_EVIDENCE",
+          "prediction": "HIGH_EVIDENCE",
+          "risk_scores": {
+            "HIGH_EVIDENCE": 0.7897899746894836,
+            "NO_EVIDENCE": 0.16113674640655518,
+            "REVIEW": 0.04907332733273506
+          }
+        },
+        {
+          "case_id": "IND200_088",
+          "subset": "HARD_NEGATIVE",
+          "gold": "NO_EVIDENCE",
+          "prediction": "HIGH_EVIDENCE",
+          "risk_scores": {
+            "HIGH_EVIDENCE": 0.9810629487037659,
+            "NO_EVIDENCE": 0.004627870861440897,
+            "REVIEW": 0.014309115707874298
+          }
+        },
+        {
+          "case_id": "IND200_090",
+          "subset": "HARD_NEGATIVE",
+          "gold": "NO_EVIDENCE",
+          "prediction": "HIGH_EVIDENCE",
+          "risk_scores": {
+            "HIGH_EVIDENCE": 0.9162247776985168,
+            "NO_EVIDENCE": 0.011629682034254074,
+            "REVIEW": 0.0721454992890358
+          }
+        },
+        {
+          "case_id": "IND200_094",
+          "subset": "HARD_NEGATIVE",
+          "gold": "NO_EVIDENCE",
+          "prediction": "HIGH_EVIDENCE",
+          "risk_scores": {
+            "HIGH_EVIDENCE": 0.8732171654701233,
+            "NO_EVIDENCE": 0.05744267255067825,
+            "REVIEW": 0.06934011727571487
+          }
+        },
+        {
+          "case_id": "IND200_095",
+          "subset": "HARD_NEGATIVE",
+          "gold": "NO_EVIDENCE",
+          "prediction": "HIGH_EVIDENCE",
+          "risk_scores": {
+            "HIGH_EVIDENCE": 0.6775497794151306,
+            "NO_EVIDENCE": 0.033673543483018875,
+            "REVIEW": 0.28877678513526917
+          }
+        },
+        {
+          "case_id": "IND200_098",
+          "subset": "HARD_NEGATIVE",
+          "gold": "NO_EVIDENCE",
+          "prediction": "HIGH_EVIDENCE",
+          "risk_scores": {
+            "HIGH_EVIDENCE": 0.9087579250335693,
+            "NO_EVIDENCE": 0.07970426231622696,
+            "REVIEW": 0.011537859216332436
+          }
+        },
+        {
+          "case_id": "IND200_101",
+          "subset": "HARD_NEGATIVE",
+          "gold": "NO_EVIDENCE",
+          "prediction": "REVIEW",
+          "risk_scores": {
+            "HIGH_EVIDENCE": 0.117014080286026,
+            "NO_EVIDENCE": 0.3394055962562561,
+            "REVIEW": 0.5435802936553955
+          }
+        },
+        {
+          "case_id": "IND200_103",
+          "subset": "HARD_NEGATIVE",
+          "gold": "NO_EVIDENCE",
+          "prediction": "REVIEW",
+          "risk_scores": {
+            "HIGH_EVIDENCE": 0.18588809669017792,
+            "NO_EVIDENCE": 0.374773234128952,
+            "REVIEW": 0.43933868408203125
+          }
+        },
+        {
+          "case_id": "IND200_108",
+          "subset": "HARD_NEGATIVE",
+          "gold": "NO_EVIDENCE",
+          "prediction": "HIGH_EVIDENCE",
+          "risk_scores": {
+            "HIGH_EVIDENCE": 0.9536764025688171,
+            "NO_EVIDENCE": 0.008229817263782024,
+            "REVIEW": 0.038093820214271545
+          }
+        },
+        {
+          "case_id": "IND200_110",
+          "subset": "HARD_NEGATIVE",
+          "gold": "NO_EVIDENCE",
+          "prediction": "HIGH_EVIDENCE",
+          "risk_scores": {
+            "HIGH_EVIDENCE": 0.8363823294639587,
+            "NO_EVIDENCE": 0.1386088728904724,
+            "REVIEW": 0.02500876411795616
+          }
+        },
+        {
+          "case_id": "IND200_114",
+          "subset": "HARD_NEGATIVE",
+          "gold": "NO_EVIDENCE",
+          "prediction": "REVIEW",
+          "risk_scores": {
+            "HIGH_EVIDENCE": 0.31582680344581604,
+            "NO_EVIDENCE": 0.11033275723457336,
+            "REVIEW": 0.5738404393196106
+          }
+        },
+        {
+          "case_id": "IND200_116",
+          "subset": "HARD_NEGATIVE",
+          "gold": "NO_EVIDENCE",
+          "prediction": "REVIEW",
+          "risk_scores": {
+            "HIGH_EVIDENCE": 0.03069845773279667,
+            "NO_EVIDENCE": 0.006589553784579039,
+            "REVIEW": 0.9627119898796082
+          }
+        },
+        {
+          "case_id": "IND200_117",
+          "subset": "HARD_NEGATIVE",
+          "gold": "NO_EVIDENCE",
+          "prediction": "HIGH_EVIDENCE",
+          "risk_scores": {
+            "HIGH_EVIDENCE": 0.5085052847862244,
+            "NO_EVIDENCE": 0.2715470492839813,
+            "REVIEW": 0.21994763612747192
+          }
+        },
+        {
+          "case_id": "IND200_118",
+          "subset": "HARD_NEGATIVE",
+          "gold": "NO_EVIDENCE",
+          "prediction": "HIGH_EVIDENCE",
+          "risk_scores": {
+            "HIGH_EVIDENCE": 0.8465602397918701,
+            "NO_EVIDENCE": 0.0417671799659729,
+            "REVIEW": 0.11167257279157639
+          }
+        },
+        {
+          "case_id": "IND200_120",
+          "subset": "HARD_NEGATIVE",
+          "gold": "NO_EVIDENCE",
+          "prediction": "REVIEW",
+          "risk_scores": {
+            "HIGH_EVIDENCE": 0.17554748058319092,
+            "NO_EVIDENCE": 0.2792227566242218,
+            "REVIEW": 0.5452297329902649
+          }
+        },
+        {
+          "case_id": "IND200_122",
+          "subset": "HARD_NEGATIVE",
+          "gold": "NO_EVIDENCE",
+          "prediction": "REVIEW",
+          "risk_scores": {
+            "HIGH_EVIDENCE": 0.04920203611254692,
+            "NO_EVIDENCE": 0.15667448937892914,
+            "REVIEW": 0.7941234707832336
+          }
+        },
+        {
+          "case_id": "IND200_127",
+          "subset": "HARD_NEGATIVE",
+          "gold": "NO_EVIDENCE",
+          "prediction": "REVIEW",
+          "risk_scores": {
+            "HIGH_EVIDENCE": 0.14825469255447388,
+            "NO_EVIDENCE": 0.3504350483417511,
+            "REVIEW": 0.5013102293014526
+          }
+        },
+        {
+          "case_id": "IND200_128",
+          "subset": "HARD_NEGATIVE",
+          "gold": "NO_EVIDENCE",
+          "prediction": "HIGH_EVIDENCE",
+          "risk_scores": {
+            "HIGH_EVIDENCE": 0.987360417842865,
+            "NO_EVIDENCE": 0.007368946447968483,
+            "REVIEW": 0.005270569119602442
+          }
+        },
+        {
+          "case_id": "IND200_131",
+          "subset": "HARD_NEGATIVE",
+          "gold": "NO_EVIDENCE",
+          "prediction": "REVIEW",
+          "risk_scores": {
+            "HIGH_EVIDENCE": 0.14309336245059967,
+            "NO_EVIDENCE": 0.3970314562320709,
+            "REVIEW": 0.4598751664161682
+          }
+        },
+        {
+          "case_id": "IND200_133",
+          "subset": "HARD_NEGATIVE",
+          "gold": "NO_EVIDENCE",
+          "prediction": "REVIEW",
+          "risk_scores": {
+            "HIGH_EVIDENCE": 0.078558549284935,
+            "NO_EVIDENCE": 0.4478274881839752,
+            "REVIEW": 0.4736139178276062
+          }
+        },
+        {
+          "case_id": "IND200_135",
+          "subset": "HARD_NEGATIVE",
+          "gold": "NO_EVIDENCE",
+          "prediction": "REVIEW",
+          "risk_scores": {
+            "HIGH_EVIDENCE": 0.13564811646938324,
+            "NO_EVIDENCE": 0.14573292434215546,
+            "REVIEW": 0.7186189889907837
+          }
+        },
+        {
+          "case_id": "IND200_154",
+          "subset": "EASY_NEGATIVE",
+          "gold": "NO_EVIDENCE",
+          "prediction": "REVIEW",
+          "risk_scores": {
+            "HIGH_EVIDENCE": 0.3461354374885559,
+            "NO_EVIDENCE": 0.30735090374946594,
+            "REVIEW": 0.34651365876197815
+          }
+        },
+        {
+          "case_id": "IND200_167",
+          "subset": "EASY_NEGATIVE",
+          "gold": "NO_EVIDENCE",
+          "prediction": "REVIEW",
+          "risk_scores": {
+            "HIGH_EVIDENCE": 0.020290251821279526,
+            "NO_EVIDENCE": 0.15819762647151947,
+            "REVIEW": 0.8215121030807495
+          }
+        },
+        {
+          "case_id": "IND200_171",
+          "subset": "EASY_NEGATIVE",
+          "gold": "NO_EVIDENCE",
+          "prediction": "REVIEW",
+          "risk_scores": {
+            "HIGH_EVIDENCE": 0.01634754054248333,
+            "NO_EVIDENCE": 0.18297849595546722,
+            "REVIEW": 0.8006739616394043
+          }
+        },
+        {
+          "case_id": "IND200_182",
+          "subset": "EASY_NEGATIVE",
+          "gold": "NO_EVIDENCE",
+          "prediction": "REVIEW",
+          "risk_scores": {
+            "HIGH_EVIDENCE": 0.06544223427772522,
+            "NO_EVIDENCE": 0.384351909160614,
+            "REVIEW": 0.5502058863639832
+          }
+        },
+        {
+          "case_id": "IND200_183",
+          "subset": "EASY_NEGATIVE",
+          "gold": "NO_EVIDENCE",
+          "prediction": "REVIEW",
+          "risk_scores": {
+            "HIGH_EVIDENCE": 0.014703365974128246,
+            "NO_EVIDENCE": 0.44401100277900696,
+            "REVIEW": 0.5412856340408325
+          }
+        },
+        {
+          "case_id": "IND200_184",
+          "subset": "EASY_NEGATIVE",
+          "gold": "NO_EVIDENCE",
+          "prediction": "REVIEW",
+          "risk_scores": {
+            "HIGH_EVIDENCE": 0.07554738968610764,
+            "NO_EVIDENCE": 0.23237816989421844,
+            "REVIEW": 0.6920744180679321
+          }
+        },
+        {
+          "case_id": "IND200_186",
+          "subset": "EASY_NEGATIVE",
+          "gold": "NO_EVIDENCE",
+          "prediction": "HIGH_EVIDENCE",
+          "risk_scores": {
+            "HIGH_EVIDENCE": 0.7936981916427612,
+            "NO_EVIDENCE": 0.1918957680463791,
+            "REVIEW": 0.014406047761440277
+          }
+        }
+      ],
+      "predictions_sha256": "67aba49b6fb118d6b5c5ba4e335442a6bba7e5842706fe3477609bddf2c311cf",
+      "internal_gold_sha256": "40807e46939000a487e5975b5b51942a11ffffb1a4ced3e66a5fa62b5fa7d2ef",
+      "macro_f1_supported_labels": 0.8179334628460417,
+      "positive_warning_recall": 0.9
+    }
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "name": "smooth_alpha_0_5",
+  "path": "round3_quality\\smooth_alpha_0_5\\risk_int8.onnx",
+  "sha256": "ba9ca9f90384be9387f1959a4b6f22c9fa16ebb6146630b819fca5c2fdae2bfe",
+  "dev": {
+    "accuracy": 0.9698492462311558,
+    "macro_f1": 0.9696787424337078,
+    "confusion_matrix": [
+      [
+        126,
+        3,
+        4
+      ],
+      [
+        1,
+        138,
+        1
+      ],
+      [
+        1,
+        2,
+        122
+      ]
+    ],
+    "gold_class_support": [
+      133,
+      140,
+      125
+    ],
+    "high_to_no_evidence": 1,
+    "no_evidence_to_high": 4,
+    "changed_labels_vs_fp32": 3,
+    "logit_mse_vs_fp32": 0.024231495335698128,
+    "max_abs_logit_error": 1.307830810546875,
+    "median_ms": 20.793099999991682,
+    "p95_ms": 33.639800000355535,
+    "model_bytes": 281633500
+  },
+  "frozen_utc": "2026-11-03T09:38:33.908127+00:00"
+}

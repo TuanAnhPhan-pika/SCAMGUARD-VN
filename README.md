@@ -37,6 +37,23 @@ Tải hai checkpoint tại **[Release Model v1](https://github.com/TuanAnhPhan-p
 
 Bộ independent test chỉ có gold `NO_EVIDENCE` và `HIGH_EVIDENCE`; vì vậy macro-F1 ba lớp 54,53% được công bố nhưng không dùng làm chỉ số đại diện. Chi tiết ở [`evaluation/independent_test_200`](evaluation/independent_test_200).
 
+## Thử nghiệm bổ sung: baseline và INT8
+
+Hai nghiên cứu bổ sung được giữ riêng; model/API/Android và kết quả independent test gốc không bị thay thế.
+
+| Nội dung | Kết quả chính | Chi tiết |
+|---|---|---|
+| XLM-R gốc → chỉ train risk, so với pipeline có action/semantic pretraining | Accuracy 57,00% / 76,50%; macro-F1 hai nhãn 64,57% / 81,79%; NO_EVIDENCE đoán đúng 46,15% / 73,08% | [Bảng đầy đủ và cách chấm](evaluation/semantic_pretraining_comparison/README.md) |
+| Risk-only INT8 cải thiện, so với ONNX FP32 | 1111,6 → 281,6 MB; accuracy 76,00% → 75,50%; median CPU laptop 37,06 → 16,46 ms | [Các vòng nén, tốc độ và giới hạn](evaluation/risk_int8/README.md) |
+
+Đây là **comparative re-evaluation**, không phải hai test độc lập mới. Baseline dùng prediction gốc và parser lịch sử (public 76,5%); thử nghiệm nén giữ parser hiện tại (FP32 76,0%). Không gộp hai bảng như thể cùng preprocessing. Baseline chưa học action/semantic; INT8 vẫn kế thừa encoder đã học chúng. Một seed baseline chưa đo độ dao động. Hai thư mục `experiments/` có code tái lập; trọng số bổ sung phân phối qua Release thử nghiệm riêng, không ghi đè `model-v1`.
+
+Kiểm tra tất cả kết quả bổ sung chỉ bằng prediction đã lưu, không train/suy luận lại:
+
+```powershell
+python scripts/verify_research_results.py
+```
+
 ## Cấu trúc repository
 
 ```text
@@ -48,6 +65,10 @@ runtime/research/v3/jarp_vn/   encoder/collator lõi
 data/splits/                   bốn split TRAIN/DEV dùng trong báo cáo
 evaluation/independent_test_200/ input, gold, prediction, report và hash
 reports/training/              lịch sử metric DEV
+experiments/xlmr_risk_only/    baseline XLM-R gốc chỉ học nhãn risk
+experiments/risk_int8/         export/nén/runtime INT8 thử nghiệm
+evaluation/semantic_pretraining_comparison/  đối chứng baseline/public
+evaluation/risk_int8/          các vòng nén, prediction và benchmark CPU
 scripts/                       cài đặt, tải checkpoint và xác minh artefact
 ```
 

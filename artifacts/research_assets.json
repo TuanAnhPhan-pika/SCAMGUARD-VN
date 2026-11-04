@@ -1,0 +1,26 @@
+{
+  "baseline": {
+    "tag": "baseline-risk-only-v1",
+    "asset": "baseline_best.pt",
+    "sha256": "2faf3d9e52836100831ce914f17912a54b00938d0dfe541e0716af1386f807e6",
+    "bytes": 1113835991,
+    "destination": "experiments/xlmr_risk_only/outputs/baseline_best.pt",
+    "url": "https://github.com/TuanAnhPhan-pika/SCAMGUARD-VN/releases/download/baseline-risk-only-v1/baseline_best.pt"
+  },
+  "int8": {
+    "tag": "risk-int8-v1",
+    "asset": "risk_int8.onnx",
+    "sha256": "ba9ca9f90384be9387f1959a4b6f22c9fa16ebb6146630b819fca5c2fdae2bfe",
+    "bytes": 281633500,
+    "destination": "artifacts/onnx/risk_int8.onnx",
+    "url": "https://github.com/TuanAnhPhan-pika/SCAMGUARD-VN/releases/download/risk-int8-v1/risk_int8.onnx"
+  },
+  "tokenizer": {
+    "tag": "risk-int8-v1",
+    "asset": "tokenizer.json",
+    "sha256": "a898ea75433890f6610f4e470b8ebeb0c21dce5c8dd61f892eb09eb5919d2e2c",
+    "bytes": 9096718,
+    "destination": "experiments/risk_int8/tokenizer/tokenizer.json",
+    "url": "https://github.com/TuanAnhPhan-pika/SCAMGUARD-VN/releases/download/risk-int8-v1/tokenizer.json"
+  }
+}

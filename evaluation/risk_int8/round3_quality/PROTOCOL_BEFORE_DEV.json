@@ -1,0 +1,11 @@
+{
+  "time_utc": "2026-11-03T09:36:37.595199+00:00",
+  "context": "Adaptive development after round2 test failure; no claim of fresh independent evaluation.",
+  "candidates": [
+    "row-wise embedding + per-channel INT8 weights with FP32 activations",
+    "SmoothQuant-inspired alpha=0.5",
+    "SmoothQuant-inspired alpha=0.7"
+  ],
+  "selection": "No gold labels used for ranking: among <=450MB and median latency <=1.25x FP32, minimize DEV logit MSE to FP32, tie fewer changed labels. Fallback min MSE among <=450MB.",
+  "calibration": "64 seeded TRAIN inputs for smoothing; no test input or gold used for activation statistics; no training or threshold changes."
+}

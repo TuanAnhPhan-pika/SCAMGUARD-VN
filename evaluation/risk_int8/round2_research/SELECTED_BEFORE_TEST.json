@@ -1,0 +1,40 @@
+{
+  "selected": "row_embedding_per_channel",
+  "sha256": "5548508b5de99b9ad7a51bbaa507aaae8ad0cc842773bd5e681f1ab1243e4240",
+  "selection_completed_utc": "2026-11-03T09:33:29.237408+00:00",
+  "dev": {
+    "accuracy": 0.9748743718592965,
+    "macro_f1": 0.9747690216953759,
+    "confusion_matrix": [
+      [
+        128,
+        1,
+        4
+      ],
+      [
+        3,
+        137,
+        0
+      ],
+      [
+        1,
+        1,
+        123
+      ]
+    ],
+    "gold_class_support": [
+      133,
+      140,
+      125
+    ],
+    "high_to_no_evidence": 1,
+    "no_evidence_to_high": 4,
+    "changed_labels_vs_fp32": 7,
+    "logit_mse_vs_fp32": 0.1040186658501625,
+    "max_abs_logit_error": 2.984891653060913,
+    "median_ms": 16.025899999931426,
+    "p95_ms": 24.5206950002057,
+    "model_bytes": 281246383
+  },
+  "reason": "Fixed rule in PROTOCOL_BEFORE_DEV.json; no test inference yet in this round."
+}

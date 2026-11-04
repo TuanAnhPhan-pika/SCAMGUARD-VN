@@ -34,3 +34,9 @@ Xem `data/DATASET_CARD.md`, `reports/training` và `evaluation/independent_test_
 | `checkpoint_best.pt` | `ae0420e7efbdbe791b71907131c480e6fcb9d7cef9f1e4f6382cdc392eb66019` |
 | `risk_e2e_best.pt` | `824b58d32366d746adc32b4350c73cad49054f538d365f6661da4036535c8328` |
 
+
+## Thử nghiệm bổ sung
+
+- [Baseline XLM-R chỉ học risk](evaluation/semantic_pretraining_comparison/README.md): không kế thừa RUN004A/semantic; đối chứng pipeline học bổ trợ, một seed, cùng dữ liệu và cấu hình giai đoạn risk.
+- [Risk INT8](evaluation/risk_int8/README.md): nén model risk public, vẫn giữ encoder đã học semantic; thử nghiệm CPU laptop, các vòng phát triển trên test đã xem được công bố đầy đủ.
+- Các trọng số thử nghiệm nằm ở Release riêng; không thay hai checkpoint chuẩn bên trên hoặc chuyển API/Android sang INT8. Không diễn giải giảm kích thước hay tốc độ laptop là chứng nhận chạy trên điện thoại.

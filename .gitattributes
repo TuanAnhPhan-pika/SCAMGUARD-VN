@@ -1,0 +1,6 @@
+# Preserve archived research evidence byte-for-byte across platforms.
+evaluation/semantic_pretraining_comparison/** -text whitespace=cr-at-eol
+evaluation/risk_int8/** -text whitespace=cr-at-eol
+evaluation/RESEARCH_CHECKSUMS.json -text whitespace=cr-at-eol
+reports/training/xlmr_risk_only_training_report.json -text whitespace=cr-at-eol
+experiments/risk_int8/source/** -text whitespace=cr-at-eol

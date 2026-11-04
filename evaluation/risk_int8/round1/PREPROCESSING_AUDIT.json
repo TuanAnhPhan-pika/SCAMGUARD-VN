@@ -1,0 +1,15 @@
+{
+  "purpose": "Preprocessing audit only; not choosing preprocessing by test accuracy. Current published parser is retained for all compression comparisons.",
+  "native_tokenizer_pipeline_changed_labels_vs_reference_onnx": [],
+  "native_tokenizer_max_probability_error": 0.0,
+  "historical_parser_changed_labels_vs_frozen": [],
+  "current_vs_frozen_changed_cases": [
+    "IND200_002",
+    "IND200_008",
+    "IND200_012",
+    "IND200_032",
+    "IND200_098",
+    "IND200_110",
+    "IND200_117"
+  ]
+}
